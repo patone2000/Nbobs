@@ -1,26 +1,20 @@
-/**NBobs is free software: you can redistribute it and/or modify
-*    it under the terms of the GNU General Public License as published by
-*    the Free Software Foundation, either version 3 of the License, or
-*    (at your option) any later version.
-*
-*    Foobar is distributed in the hope that it will be useful,
-*    but WITHOUT ANY WARRANTY; without even the implied warranty of
-*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*    GNU General Public License for more details.
-*
-*    You should have received a copy of the GNU General Public License
-*    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
-**/
-package NBobs.experiences;
+package Nbob.experiences;
 
 import org.newdawn.slick.AppGameContainer;
+import org.newdawn.slick.BasicGame;
+import org.newdawn.slick.Color;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.tiled.TiledMap;
 
 import NBobs.entities.BobVersion1;
 import NBobs.entities.Floor;
 import NBobs.entities.Wall;
 import NBobs.environment.BasicEnvironment2D;
 import NBobs.environment.Environment2D;
+import NBobs.experiences.EnvironmentLauncher;
 
 
 public class LaunchExperience1 {
