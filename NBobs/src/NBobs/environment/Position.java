@@ -20,6 +20,7 @@ import NBobs.entities.Entity;
 public interface Position {
 	public void setName(String name);
 	public String getName();
+	public boolean isAvailableforAnimated();
 
 	public List<Entity> getEntities();
 }

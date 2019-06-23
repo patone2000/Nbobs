@@ -23,7 +23,7 @@ import NBobs.environment.BasicEnvironment2D;
 import NBobs.environment.Environment2D;
 
 
-public class LaunchExperience1 {
+public class LaunchExperience2 {
 
 
 	
@@ -87,8 +87,15 @@ public class LaunchExperience1 {
 			environment2d.addEntity(04, 04,w45);
 			
 			BobVersion1 bob= new BobVersion1("Bob", environment2d);
-			bob.setPosition(environment2d.getPosition(2, 2));
 			environment2d.addAnimated(bob);
+			bob.setPosition(environment2d.getPosition(2, 2));
+			
+			BobVersion1 boby= new BobVersion1("Boby", environment2d);
+			boby.setPosition(environment2d.getPosition(2, 3));
+			environment2d.addAnimated(boby);
+			BobVersion1 bober= new BobVersion1("Bober", environment2d);
+			bober.setPosition(environment2d.getPosition(3, 3));
+			environment2d.addAnimated(bober);
 			
 			System.out.println(environment2d.toString());
 			int pixelWidth=500;

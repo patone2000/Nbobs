@@ -14,8 +14,10 @@
 package NBobs.environment;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
+import NBobs.entities.Animated;
 import NBobs.entities.Entity;
 
 public class BasicPosition implements Position {
@@ -36,7 +38,17 @@ public class BasicPosition implements Position {
 	public String getName() {
 		return name;
 	}
-
+@Override
+	public boolean isAvailableforAnimated() {
+		for (Iterator iterator = entities.iterator(); iterator.hasNext();) {
+			Entity entity = (Entity) iterator.next();
+			if( entity instanceof Animated) {
+				return false;
+			}
+			
+		}
+		return true;
+	}
 	@Override
 	public List<Entity> getEntities() {
 		return this.entities;
