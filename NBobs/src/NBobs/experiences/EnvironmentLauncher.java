@@ -122,8 +122,6 @@ public void drawFloor(Graphics g, int row, int column) {
 public void init(GameContainer gameContainer) throws SlickException {
 	this.gc=gameContainer;
 	this.wall= new Image("tileSet/floor.png");
-	//this.wall= new Image("tileSet/piece.png");
-	//	this.aninated= new Image("tileSet/bob.png");
 	this.aninated.add( new Image("tileSet/normal/07.png"));
 	this.aninated.add( new Image("tileSet/extra/Devil-2-icon.png"));
 	this.aninated.add( new Image("tileSet/extra/Alien-icon.png"));
