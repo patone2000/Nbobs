@@ -18,7 +18,12 @@ import java.util.Random;
 
 import NBobs.environment.Environment2D;
 import NBobs.environment.Position;
+import NBobs.knowledge.KnowledgeType;
 
+/**
+ * This bob 
+ *
+ */
 public class BobVersion1 extends BasicObject implements Animated  {
 
 	protected Environment2D environment;
@@ -30,8 +35,8 @@ public class BobVersion1 extends BasicObject implements Animated  {
 	}
 
 	@Override
-	public String agir(Entity e) {
-		return "";
+	public KnowledgeType actOn(Entity e) {
+		return new KnowledgeType(this, "Pouette!");
 	}
 
 	public ArrayList<Position>getNeighbour(){
@@ -42,10 +47,14 @@ public class BobVersion1 extends BasicObject implements Animated  {
 	public void doAction() {
 		System.out.println(name+": I do an action :");
 		ArrayList<Position> neighbour=environment.getNeighbour(position);
+		//choose neighbour
 		Random r = new Random();
-		int valeur = r.nextInt(neighbour.size());
-		neighbour.get(valeur).getEntities().get(0).agir(this);
-		System.out.println(name+": I do an action on :"+neighbour.get(valeur));
+		int neighbourIndex = r.nextInt(neighbour.size());
+		//choose Entity
+		int entityIndex = r.nextInt(neighbour.get(neighbourIndex).getEntities().size());
+		
+		neighbour.get(neighbourIndex).getEntities().get(entityIndex).actOn(this);
+		System.out.println(name+": I do an action on :"+neighbour.get(neighbourIndex).getEntities().get(entityIndex));
 	}
 
 	@Override
@@ -70,6 +79,10 @@ public class BobVersion1 extends BasicObject implements Animated  {
 	public void setEnviroment(Environment2D evEnvironment2d) {
 		this.environment=evEnvironment2d;
 
+	}
+
+	@Override
+	public void expressKnowledge() {
 	}
 
 }

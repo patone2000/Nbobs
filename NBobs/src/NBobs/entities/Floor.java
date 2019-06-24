@@ -13,7 +13,7 @@
  **/
 package NBobs.entities;
 
-import NBobs.environment.Position;
+import NBobs.knowledge.KnowledgeType;
 
 public class Floor extends BasicObject {
 
@@ -27,11 +27,11 @@ public class Floor extends BasicObject {
 	}
 
 	@Override
-	public String agir(Entity e) {
+	public KnowledgeType actOn(Entity e) {
 		if( e instanceof Animated) {
 			move((Animated)e);
-			return ("move");
+			return new KnowledgeType(this, "Move");
 		}
-		return super.agir(e);
+		return super.actOn(e);
 	}
 }

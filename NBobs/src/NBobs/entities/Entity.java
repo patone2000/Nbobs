@@ -14,13 +14,28 @@
 package NBobs.entities;
 
 import NBobs.environment.Position;
+import NBobs.knowledge.KnowledgeType;
 
+/**
+ * This is the more abstract concepts that we can put inside an environment
+ * @author Patrick
+ *
+ */
 public interface Entity {
 
 	public Position getPosition();
 	public void setPosition(Position position);
 	
-	public String agir(Entity e);
+	/**
+	 * This method means that an Entity can act on this Entity
+	 * @param e the entity that can on it.
+	 * @return the action done
+	 */
+	public KnowledgeType actOn(Entity e);
+	/**
+	 * 
+	 * @return the name of the entity
+	 */
 	public String getName();
 	
 }

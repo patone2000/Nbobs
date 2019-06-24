@@ -14,6 +14,8 @@
 package NBobs.entities;
 
 import NBobs.environment.Position;
+import NBobs.knowledge.KnowledgeType;
+import NBobs.knowledge.Nothing;
 
 public class Wall extends BasicObject {
 

@@ -14,6 +14,8 @@
 package NBobs.entities;
 
 import NBobs.environment.Position;
+import NBobs.knowledge.KnowledgeType;
+import NBobs.knowledge.Nothing;
 
 public class BasicObject implements Object {
 	protected Position position=null;
@@ -33,8 +35,8 @@ public class BasicObject implements Object {
 	}
 
 	@Override
-	public String agir(Entity e) {
-		return "";
+	public KnowledgeType actOn(Entity e) {
+		return new Nothing(this);
 	}
 
 	@Override
